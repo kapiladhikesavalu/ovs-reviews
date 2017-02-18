@@ -247,3 +247,9 @@ ovsdb_error_assert(struct ovsdb_error *error)
         ovsdb_error_destroy(error);
     }
 }
+
+int
+ovsdb_error_get_errno(const struct ovsdb_error *error)
+{
+    return error->errno_;
+}
